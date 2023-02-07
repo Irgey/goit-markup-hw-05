@@ -543,7 +543,8 @@ header {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-
+  transition: color var(--transition-fast) var(--transition-function),
+    background-color var(--transition-fast) var(--transition-function);
   border-color: transparent;
   border-radius: 4px;
 }
