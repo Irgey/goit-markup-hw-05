@@ -472,28 +472,32 @@ header {
 }
 .product-thumb {
   display: flex;
-  align-items: center;
   overflow: hidden;
   position: relative;
 }
-.product-thumb::before {
-  display: inline-block;
+.product-box-text-hidden {
+  display: flex;
+  align-items: center;
   position: absolute;
+  padding: 0 24px;
   width: 100%;
   height: 100%;
-  content: '';
   background-color: var(--projects-hover-color);
-  opacity: 1;
+  opacity: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
 
   transform: translateY(100%);
   transition: transform var(--transition-fast) var(--transition-function);
 }
-.product-thumb:hover::before {
+.projects-link:hover .product-box-text-hidden {
   opacity: 1;
-}
-.projects .item:hover .product-thumb::before {
   transform: translateY(0);
 }
+
 .projects.list {
   display: flex;
   flex-wrap: wrap;
